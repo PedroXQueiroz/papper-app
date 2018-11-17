@@ -1,0 +1,14 @@
+.sources-list-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sources-list-header button{
+    background: none;
+    border: none;
+}
+
+ion-badge{
+    margin: 5px;
+}

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>News</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="showOptions($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-card *ngFor="let article of articles">
+    
+    <ion-img src="{{article.urlToImage || '../../../resources/not-found.png'}}"></ion-img>
+
+    <ion-card-header>
+        <ion-card-title>{{article.title}}</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+        <p>{{article.content}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="reload()" >
+      <ion-icon name="refresh-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

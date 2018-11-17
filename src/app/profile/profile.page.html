@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="user.login.username"></ion-input>
+    </ion-item>
+    
+    <ion-item *ngIf="!isNew">
+      <ion-label position="floating">Previous Password</ion-label>
+      <ion-input [(ngModel)]="currentPassword" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">New Password</ion-label>
+      <ion-input [(ngModel)]="newPassword" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input [(ngModel)]="passwordConfirmation" type="password"></ion-input>
+    </ion-item>
+
+    <div class="sources-list-header">
+      <span>Sources</span> 
+      <ion-icon (click)="editSourceList()" name="add"></ion-icon> 
+    </div>
+    
+    <div>
+        <ion-badge *ngFor="let source of user.sources" color="primary">
+          {{source.name}}
+          <span (click)="removeSource(source.id)">x</span>
+        </ion-badge>
+    </div>
+  
+  <div *ngIf="isNew" class="fixed-footer">
+    <ion-button class="button button-block button-positive" (click)="register()">REGISTER</ion-button>
+  </div>
+  
+  <div *ngIf="!isNew" class="fixed-footer">
+    <ion-button class="button button-block button-positive" (click)="update()">UPDATE</ion-button>
+  </div>
+</ion-content>

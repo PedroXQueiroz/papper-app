@@ -1,0 +1,1 @@
+{"version":3,"file":"article-filter.js","sourceRoot":"","sources":["../../../../src/models/article-filter.ts"],"names":[],"mappings":";;AAEA;IAEI;QACI,IAAI,CAAC,QAAQ,GAAG,EAAE,CAAC;IACvB,CAAC;IAID,sBAAI,kCAAO;aAAX;YACI,OAAO,IAAI,CAAC,QAAQ,CAAC;QACzB,CAAC;aAED,UAAY,OAAuB;YAC/B,IAAI,CAAC,QAAQ,GAAG,OAAO,CAAC;QAC5B,CAAC;;;OAJA;IAKL,oBAAC;AAAD,CAAC,AAfD,IAeC;AAfY,sCAAa"}
